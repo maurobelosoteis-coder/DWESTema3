@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body class="bg-light text-dark">
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+  <div class="container py-4">
+    <h2 class="h2 fw-bold mb-4">Enlaces Externos del FC Barcelona</h2>
+    <ul class="ps-4">
+      <li>
+        <a th:href="@{https://www.fcbarcelona.com}" class="link-primary" target="_blank" rel="noopener noreferrer">Página Oficial del FC Barcelona</a>
+      </li>
+      <li>
+        <a th:href="@{https://es.wikipedia.org/wiki/F%C3%BAtbol_Club_Barcelona}" class="link-primary" target="_blank" rel="noopener noreferrer">Wikipedia - FC Barcelona</a>
+      </li>
+      <li>
+        <a th:href="@{https://twitter.com/FCBarcelona}" class="link-primary" target="_blank" rel="noopener noreferrer">Twitter - FC Barcelona</a>
+      </li>
+      <li>
+        <a th:href="@{https://www.instagram.com/fcbarcelona}" class="link-primary" target="_blank" rel="noopener noreferrer">Instagram - FC Barcelona</a>
+      </li>
+      <li>
+        <a th:href="@{https://www.youtube.com/user/fcbarcelona}" class="link-primary" target="_blank" rel="noopener noreferrer">YouTube - FC Barcelona</a>
+      </li>
+    </ul>
+    <img th:src="@{/img/barcelona-inicio.jpg}" alt="Camp Nou" class="img-fluid my-4 rounded shadow">
+  </div>
+</body>
+
+</html>

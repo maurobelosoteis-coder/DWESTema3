@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de números aleatorios</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+
+    <h1>Listado de numeros aleatorios</h1>
+
+    <div th:if="${#lists.isEmpty(listaNumeros)}" class="mensaje-vacio">
+        La lista está vacía.
+    </div>
+
+    <table th:unless="${#lists.isEmpty(listaNumeros)}" border="1px">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Operación</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="numero : ${listaNumeros}">
+                <td th:text="${numero}"
+                    th:classappend="${numero < 50} ? 'numero-menor' : 'numero-mayor'">
+                </td>
+
+                <td>
+                    <a th:href="@{/delete/{id}(id=${numero})}">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    Total numeros:
+    <span th:text="${cantidadTotal}"></span>
+    <br>
+
+    <a th:href="@{/new}">Nuevo número</a>
+
+</body>
+
+</html>

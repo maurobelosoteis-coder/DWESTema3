@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body class="bg-light text-dark">
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+  <div class="container py-4">
+    <h1 class="h2 fw-bold mb-4" th:text="${mensaje}">Bienvenido a nuestra web</h1>
+    <p>El <strong>Fútbol Club Barcelona</strong> es uno de los clubes de fútbol más grandes del mundo, con una rica historia y una base de aficionados a nivel global.</p>
+    <img th:src="@{/img/barcelona-inicio.jpg}" alt="Equipo FC Barcelona" class="img-fluid my-4 rounded shadow">
+    <p>El Barça ha ganado numerosos títulos nacionales e internacionales, además de ser un símbolo de la cultura catalana.</p>
+    <footer class="mt-4">© <span th:text="${anno}">2025</span> · FC Barcelona — Web de clase</footer>
+  </div>
+</body>
+
+</html>

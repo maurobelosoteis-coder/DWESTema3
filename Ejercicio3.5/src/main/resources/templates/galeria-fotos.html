@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body class="bg-light text-dark">
+<nav th:replace="~{fragments/menu :: menu}"></nav>
+  <div class="container py-4">
+    <h2 class="h2 fw-bold mb-4">Galería de Fotos del FC Barcelona</h2>
+    <div class="galeria">
+      <div>
+        <img th:src="@{/img/barcelona-campnou.avif}" alt="Estadio Camp Nou">
+      </div>
+      <div>
+        <img th:src="@{/img/barcelona-celebracion.avif}" alt="Celebración de un gol">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

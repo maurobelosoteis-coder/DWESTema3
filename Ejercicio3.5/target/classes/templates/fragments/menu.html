@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head><title>Menú</title></head>
+<body>
+<nav th:fragment="menu" class="navbar navbar-expand-sm bg-primary" aria-label="Menú principal">
+    <ul class="navbar-nav flex-row flex-wrap gap-3 px-4">
+        <li><a class="nav-link text-white" th:href="@{/}">Inicio</a></li>
+        <li><a class="nav-link text-white" th:href="@{/palmares}">Palmarés</a></li>
+        <li><a class="nav-link text-white" th:href="@{/galeria-fotos}">Galería de fotos</a></li>
+        <li><a class="nav-link text-white" th:href="@{/enlaces-externos}">Enlaces externos</a></li>
+    </ul>
+</nav>
+</body>
+</html>
